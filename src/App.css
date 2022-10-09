@@ -1,0 +1,98 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    width: 32rem;
+    height: 20rem;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, .3);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+}
+.content p{
+    color: var(--Neon-Green);
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+.content h1{
+    color: var(--Light-Cyan);
+    padding: 2rem 1rem;
+}
+.divi{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.divi .mob{
+    display: none;
+}
+button{
+    background-color: var(--Neon-Green);
+    border: none;
+    border-radius: 10rem;
+    height: 4rem;
+    width: 4rem;
+    transform: translateX(14rem) translateY(2.5rem);
+    -webkit-transform: translateX(14rem) translateY(2.5rem);
+    -moz-transform: translateX(14rem) translateY(2.5rem);
+    -ms-transform: translateX(14rem) translateY(2.5rem);
+    -o-transform: translateX(14rem) translateY(2.5rem);
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 0px 50px hsl(150, 100%, 66%);
+}
+
+
+
+/*---------------- For Mobile -----------------*/
+
+@media (max-width: 375px){
+
+    .card{
+        width: 20rem;
+        height: 24rem;
+        background-color: var(--Dark-Grayish-Blue);
+        border-radius: 1rem;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, .3);
+    }
+    .divi .desk{
+        display: none;
+    }
+    .divi .mob{
+        display: flex;
+    }
+    button{
+        transform: translateX(8rem) translateY(2.5rem);
+        -webkit-transform: translateX(8rem) translateY(2.5rem);
+        -moz-transform: translateX(8rem) translateY(2.5rem);
+        -ms-transform: translateX(8rem) translateY(2.5rem);
+        -o-transform: translateX(8rem) translateY(2.5rem);
+}
+}
